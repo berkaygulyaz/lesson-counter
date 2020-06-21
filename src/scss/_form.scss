@@ -1,0 +1,22 @@
+form {
+    border-radius: 10px;
+    border: 2px solid;
+    padding: 20px;
+    width: 500px;
+    label {
+        display: block;
+        font-size: 18px;
+        font-weight: 500;
+        text-align: left;
+        width: 100%;
+    }
+    input {
+        background: transparent;
+        border-radius: 6px;
+        border: 2px solid;
+        height: 25px;
+        margin-top: 10px;
+        outline: 0;
+        width: 100%;
+    }
+}

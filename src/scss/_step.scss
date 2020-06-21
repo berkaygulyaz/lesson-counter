@@ -1,0 +1,38 @@
+section{
+    width: 100%;
+    position: absolute;
+    font-family: $montserrat;
+    background-color: $ripe-lemon;
+    .content-wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        position: relative;
+        text-align: center;
+    }
+    .next-step {
+        background: transparent;
+        border: none;
+        bottom: 10%;
+        cursor: pointer;
+        font-family: $montserrat;
+        font-size: 16px;
+        font-weight: 600;
+        outline: none;
+        position: absolute;
+        right: 0;
+    }
+    .step-title {
+       font-size: 30px;
+       font-weight: 700;
+       margin-bottom: 20px;
+    }
+    .step-text {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 22px;
+        margin-bottom: 20px;
+    }
+}

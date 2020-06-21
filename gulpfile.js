@@ -5,6 +5,7 @@ const minifyCSS = require('gulp-csso');
 const minifyJS = require('gulp-uglify');
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
+const del = require('del');
 const runSequence = require('run-sequence');
 
 gulp.task('browser-sync', () => {
@@ -13,6 +14,20 @@ gulp.task('browser-sync', () => {
             baseDir: "./"
         }
     });
+});
+
+gulp.task('css', () => {
+    return gulp.src('src/scss/**/*.scss')
+        .pipe(sass({
+            outputStyle: 'nested',
+            precision: 10,
+            includePaths: ['.']
+        }).on('error', sass.logError))
+        .pipe(minifyCSS())
+        .pipe(autoprefixer())
+        .pipe(concat('style.min.css'))
+        .pipe(gulp.dest('dist/css'))
+        .pipe(browserSync.stream());
 });
 
 gulp.task('js', () => {
@@ -25,13 +40,12 @@ gulp.task('js', () => {
 
 gulp.task('html', () => {
     gulp.src('./*.html')
-        .pipe(gulp.dest('dist'))
         .pipe(browserSync.stream());
 });
 
 
 gulp.task('watch', () => {
-    gulp.watch("src/scss/*.scss", ['css']);
+    gulp.watch("src/scss/**/*.scss", ['css']);
     gulp.watch("src/js/**/*.js", ['js']);
     gulp.watch("./*.html", ['html']);
 });
@@ -39,6 +53,7 @@ gulp.task('watch', () => {
 gulp.task('default', () => {
     runSequence(
         'html',
+        'css',
         'js',
         'browser-sync',
         'watch'
