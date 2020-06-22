@@ -2,9 +2,12 @@ const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const minifyCSS = require('gulp-csso');
-const minifyJS = require('gulp-uglify');
+const minifyImg = require('gulp-imagemin');
+const uglify = require('gulp-uglify');
+const gutil = require('gulp-util')
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
+const babel = require('gulp-babel');
 const del = require('del');
 const runSequence = require('run-sequence');
 
@@ -32,8 +35,11 @@ gulp.task('css', () => {
 
 gulp.task('js', () => {
     return gulp.src('src/js/*.js')
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
         .pipe(concat('app.min.js'))
-        .pipe(minifyJS())
+        .pipe(uglify()).on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
         .pipe(gulp.dest('dist/js'))
         .pipe(browserSync.stream());
 });
@@ -43,16 +49,16 @@ gulp.task('html', () => {
         .pipe(browserSync.stream());
 });
 
+gulp.task('delete', () => del(['dist/css', 'dist/js']));
 
 gulp.task('watch', () => {
     gulp.watch("src/scss/**/*.scss", ['css']);
-    gulp.watch("src/js/**/*.js", ['js']);
-    gulp.watch("./*.html", ['html']);
+    gulp.watch("src/js/*.js", ['js']);
 });
 
 gulp.task('default', () => {
     runSequence(
-        'html',
+        'delete',
         'css',
         'js',
         'browser-sync',

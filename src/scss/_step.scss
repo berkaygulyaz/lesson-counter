@@ -3,6 +3,7 @@ section{
     position: absolute;
     font-family: $montserrat;
     background-color: $ripe-lemon;
+    transition: all .3s;
     .content-wrapper {
         display: flex;
         align-items: center;
@@ -11,18 +12,6 @@ section{
         justify-content: center;
         position: relative;
         text-align: center;
-    }
-    .next-step {
-        background: transparent;
-        border: none;
-        bottom: 10%;
-        cursor: pointer;
-        font-family: $montserrat;
-        font-size: 16px;
-        font-weight: 600;
-        outline: none;
-        position: absolute;
-        right: 0;
     }
     .step-title {
        font-size: 30px;
@@ -34,5 +23,15 @@ section{
         font-weight: 500;
         line-height: 22px;
         margin-bottom: 20px;
+    }
+
+    &.prev-step {
+        transform: translateX(-100%);
+    }
+    &.current-step {
+        transform: translateX(0%);
+    }
+    &.next-step {
+        transform: translateX(100%);
     }
 }

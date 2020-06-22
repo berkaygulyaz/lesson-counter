@@ -1,28 +1,36 @@
 {
-  "name": "film-project",
+  "name": "lesson-counter",
   "version": "1.0.0",
-  "description": "The Movie DB API kullanılarak yapılan, film detay projesi",
+  "description": "",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/berkaygulyaz/lesson-counter.git"
+  },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "chart.js": "^2.8.0"
+  "bugs": {
+    "url": "https://github.com/berkaygulyaz/lesson-counter/issues"
   },
+  "homepage": "https://github.com/berkaygulyaz/lesson-counter#readme",
   "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
     "browser-sync": "^2.26.3",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^3.0.1",
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^4.1.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.1",
-    "node-sass": "^4.14.1",
+    "gulp-util": "^3.0.8",
     "run-sequence": "^2.2.1"
   }
 }

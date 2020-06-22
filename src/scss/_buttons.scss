@@ -1,0 +1,52 @@
+@keyframes showButton {
+    0% {
+        font-size: 0;
+    }
+    25% {
+        font-size: 12px;
+    }
+    50% {
+        font-size: 14px;
+    }
+    75% {
+        font-size: 18px;
+    }
+    100% {
+        font-size: 16px;
+    }
+}
+
+.next-step-btn {
+    animation-duration: 2s;
+    animation-name: showButton;
+    background: transparent;
+    border: none;
+    bottom: 10%;
+    cursor: pointer;
+    font-family: $montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    outline: none;
+    position: absolute;
+    right: 0;
+}
+
+.button-group {
+    margin-top: 40px;
+    button {
+        background-color: transparent;
+        border-radius: 6px;
+        border: 2px solid $cod-gray;
+        cursor: pointer;
+        font-family: $montserrat;
+        font-size: 20px;
+        font-weight: 600;
+        height: 50px;
+        transition: all .2s;
+        width: 150px;
+        &:hover {
+            background-color: $cod-gray;
+            color: $color-white;
+        }
+    }
+}
