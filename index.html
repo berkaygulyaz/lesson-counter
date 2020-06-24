@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./dist/css/style.min.css">
 </head>
 <body>
-    <section id="first-step" data-stepid="1" data-selectedid="1">
+    <section id="first-step" class="current-step" data-step-id="1" data-selected-id="1">
         <div class="container">
             <div class="content-wrapper">
                 <h1 class="step-title">Pomodoro Tekniği Nedir?</h1>
@@ -28,23 +28,21 @@
                     25 dakikalık çalışma süresi boyunca çalışılan konu haricinde birşey düşünülmemesi gerekir. 
                     Aynı şekilde 5’er dakikalık molalarda da çalıştığınız konu hakkında düşünmeniz kesinlikle yasaktır.
                 </p>
-                <button class="next-step-btn">Sonraki Adım <i class='fas fa-arrow-right'></i></button>
             </div>
 
         </div>
     </section> 
-    <section id="second-step" data-stepid="2" data-selectedid="1">
+    <section id="second-step" class="next-step" data-step-id="2" data-selected-id="1">
         <div class="container">
             <div class="content-wrapper">
                 <form action="">
                     <label for="">Adınız</label>
                     <input type="text" placeholder="">
                 </form>
-                <button class="next-step-btn">Sonraki Adım <i class='fas fa-arrow-right'></i></button>
             </div>
         </div>
     </section>
-    <section id="third-step" data-stepid="3" data-selectedid="1">
+    <!-- <section id="third-step" class="next-step" data-step-id="3" data-selected-id="1">
         <div class="container">
             <div class="content-wrapper">
                 <span class="welcome">Hoşgeldin, Kullanıcı Adı</span>
@@ -55,8 +53,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     
+    <button class="next-step-btn">Sonraki Adım <i class='fas fa-arrow-right'></i></button>
     
     <!-- Scripts -->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
