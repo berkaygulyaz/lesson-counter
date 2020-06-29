@@ -1,9 +1,9 @@
 section{
     width: 100%;
-    position: absolute;
+    position: fixed;
     font-family: $montserrat;
     background-color: $ripe-lemon;
-    transition: all .3s;
+    transition: all .3s ease-in-out;
     .content-wrapper {
         display: flex;
         align-items: center;
@@ -26,12 +26,12 @@ section{
     }
 
     &.prev-step {
-        transform: translateX(-100%);
+        left: -100%;
     }
     &.current-step {
-        transform: translateX(0%);
+        left: 0;
     }
     &.next-step {
-        transform: translateX(100%);
+        left: 100%;
     }
 }

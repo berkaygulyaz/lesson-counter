@@ -1,3 +1,4 @@
 window.addEventListener('load', () => {
-    new stepChange
+    new stepChange;
+    new userName;
 })
