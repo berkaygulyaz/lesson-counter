@@ -18,6 +18,10 @@ class stepChange {
                 } else if (stepId > changeId) {
                     item.classList.add('next-step')
                 }
+
+                if(changeId == 3) {
+                    nextStepBtn.remove()
+                }
             })
         })
     }

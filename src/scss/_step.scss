@@ -35,3 +35,18 @@ section{
         left: 100%;
     }
 }
+
+.yellow-band {
+    background: $ripe-lemon;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    &.hidden {
+        opacity: 0;
+        transition: all .3s;
+        visibility: hidden;
+    }
+}

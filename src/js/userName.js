@@ -16,6 +16,7 @@ class userName {
                 item.classList.remove('current-step', 'prev-step', 'next-step')
                 item.setAttribute('data-selected-id', '3')
             })
+            nextBtn.remove()
         } else {
             welcomeText.innerHTML += `Hoşgeldin`
         }
