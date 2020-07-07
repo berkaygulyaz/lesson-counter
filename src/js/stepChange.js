@@ -1,4 +1,4 @@
-class stepChange {
+class StepChange {
     constructor() {
         const nextStepBtn = document.querySelector('.next-step-btn');
         const step = document.querySelectorAll('section')

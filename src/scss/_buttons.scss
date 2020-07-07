@@ -50,3 +50,17 @@
         }
     }
 }
+
+.start-timer {
+    .button-group {
+        button {
+            border-color: $color-white;
+            color: $color-white;
+
+            &:hover {
+                background-color: $color-white;
+                color: $smalt;
+            }
+        }
+    }
+}

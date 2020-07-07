@@ -1,9 +1,25 @@
-.welcome {
-    font-size: 17px;
-    font-weight: 600;
-    margin-bottom: 20px;
+#third-step {
+    .welcome {
+        font-size: 17px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    .time {
+        font-size: 120px;
+        font-weight: 600;
+    }
 }
-.time {
-    font-size: 120px;
-    font-weight: 600;
+
+.start-timer {
+    #third-step {
+        background-color: $smalt;
+    }
+
+    .welcome {
+        color: $color-white;
+    }
+
+    .time {
+        color: $color-white;
+    }
 }
